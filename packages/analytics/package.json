@@ -21,6 +21,9 @@
     "firebase",
     "analytics"
   ],
+  "dependencies": {
+    "superstruct": "^0.13.0"
+  },
   "peerDependencies": {
     "@react-native-firebase/app": "10.3.0"
   },

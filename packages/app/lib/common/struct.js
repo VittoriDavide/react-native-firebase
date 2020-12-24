@@ -14,14 +14,7 @@
  *  limitations under the License.
  */
 
-import { superstruct } from 'superstruct/lib/index';
 import { isUndefined } from './validate';
-
-export default superstruct({
-  types: {
-    shortDate: value => typeof value === 'string' && !!value.match(/^\d{4}-\d{2}-\d{2}$/),
-  },
-});
 
 export const validateStruct = (value = {}, struct, prefix = '') => {
   try {
