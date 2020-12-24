@@ -191,6 +191,7 @@ describe('firestore.QuerySnapshot', function () {
       const callback = sinon.spy();
       snapshot.forEach.should.be.Function();
       snapshot.forEach(callback);
+      await Utils.spyToBeCalledTimesAsync(callback, 2, 20000);
       callback.should.be.calledTwice();
       callback.args[0][0].constructor.name.should.eql('FirestoreDocumentSnapshot');
       callback.args[0][1].should.be.Number();
